@@ -90,7 +90,9 @@ const Challenges = () => {
           {challenge.title}
         </Link>
       ))}
-      <ChallengeWidget />
+      <ChallengeWidget linkTo="id1" title="challenge 1" />
+      <ChallengeWidget linkTo="id2" title="challenge 2" />
+      <ChallengeWidget linkTo="id3" title="challenge 3" />
     </Chrome>
   );
 };
