@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Router, Link } from "@reach/router";
 
 import { CreateChallenge, EditChallenge } from "views/views";
-import { Chrome } from "components/components";
+import { Chrome, ChallengeWidget } from "components/components";
 import { getChallenges } from "db/db";
 
 const EditRecord = ({ challengeId, recordId }) => (
@@ -90,6 +90,7 @@ const Challenges = () => {
           {challenge.title}
         </Link>
       ))}
+      <ChallengeWidget />
     </Chrome>
   );
 };
