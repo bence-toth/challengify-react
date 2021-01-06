@@ -5,7 +5,7 @@ const Label = ({ name, color }) => (
   <div
     className="label"
     style={{
-      backgroundColor: color
+      backgroundColor: color,
     }}
   >
     {name}
