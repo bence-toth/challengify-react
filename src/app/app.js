@@ -86,52 +86,22 @@ const Challenges = () => {
       }}
     >
       {challenges.map((challenge) => (
-        <Link key={challenge.id} to={`${challenge.id}`}>
-          {challenge.title}
-        </Link>
+        <ChallengeWidget
+          key={challenge.id}
+          linkTo={`${challenge.id}`}
+          title={challenge.title}
+          labels={[
+            {
+              name: "Learning",
+              color: "#ccfffe",
+            },
+            {
+              name: "NY Resolutions",
+              color: "#feffcb",
+            },
+          ]}
+        />
       ))}
-      <ChallengeWidget
-        linkTo="id1"
-        title="challenge 1"
-        labels={[
-          {
-            name: "Learning",
-            color: "#ccfffe",
-          },
-          {
-            name: "NY Resolutions",
-            color: "#feffcb",
-          },
-        ]}
-      />
-      <ChallengeWidget
-        linkTo="id2"
-        title="challenge 2"
-        labels={[
-          {
-            name: "Fitness",
-            color: "#ffccff",
-          },
-          {
-            name: "NY Resolutions",
-            color: "#feffcb",
-          },
-        ]}
-      />
-      <ChallengeWidget
-        linkTo="id3"
-        title="challenge 3"
-        labels={[
-          {
-            name: "Learning",
-            color: "#ccfffe",
-          },
-          {
-            name: "Mindfulness",
-            color: "#ddcbff",
-          },
-        ]}
-      />
     </Chrome>
   );
 };
