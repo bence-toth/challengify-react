@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Router, Link } from "@reach/router";
 
 import { CreateChallenge, EditChallenge } from "views/views";
-import { Chrome } from "components/components";
+import { Chrome, ChallengeWidget } from "components/components";
 import { getChallenges } from "db/db";
 
 const EditRecord = ({ challengeId, recordId }) => (
@@ -86,9 +86,21 @@ const Challenges = () => {
       }}
     >
       {challenges.map((challenge) => (
-        <Link key={challenge.id} to={`${challenge.id}`}>
-          {challenge.title}
-        </Link>
+        <ChallengeWidget
+          key={challenge.id}
+          linkTo={`${challenge.id}`}
+          title={challenge.title}
+          labels={[
+            {
+              name: "Learning",
+              color: "#ccfffe",
+            },
+            {
+              name: "NY Resolutions",
+              color: "#feffcb",
+            },
+          ]}
+        />
       ))}
     </Chrome>
   );
