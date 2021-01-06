@@ -1,6 +1,5 @@
 .challengeWidget {
   width: 100%;
-
   border: 1px solid burlywood;
   background-color: white;
   padding: 12px;
@@ -44,9 +43,8 @@
   border-radius: 50%;
 }
 
-.challengeWidget .markers .marker p {
+.challengeWidget .markers .marker .markerDate {
   display: flex;
-  position: absolute;
 }
 
 .challengeWidget .markers .currentPeriod {
@@ -55,13 +53,12 @@
   justify-content: space-between;
   border-radius: 50%;
 }
-.challengeWidget span {
+.challengeWidget .markerValue {
   display: flex;
   height: 3rem;
   width: 3rem;
   line-height: 3rem;
-
-  border-radius: 30px;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   background-color: lightgrey;
@@ -71,4 +68,7 @@
   padding: 12px;
   margin: 12px;
   margin-left: 0px;
+}
+.challengeWidget .currentPeriod {
+  margin-right: auto;
 }
