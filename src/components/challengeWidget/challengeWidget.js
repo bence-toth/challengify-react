@@ -25,16 +25,32 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
       From 21 January 2021 until 31 December 2021
     </p>
     <div className="markers">
-      <span className="marker">3</span>
-      <p>Apr</p>
-      <span className="marker">3</span>
-      <p>May</p>
-      <span className="marker">2</span>
-      <p>jun</p>
-      <span className="marker">0</span>
-      <p>Jul</p>
-      <span className="marker">3</span>
-      <p>Aug</p>
+      <div className="marker">
+        <span className="markerValue">3</span>
+        <span className="markerDate">Apr</span>
+      </div>
+
+      <div className="marker">
+        <span className="markerValue">3</span>
+        <span className="markerDate">May</span>
+      </div>
+
+      <div className="marker">
+        <span className="markerValue">2</span>
+        <span className="markerDate">Jun</span>
+      </div>
+
+      <div className="marker">
+        <span className="markerValue">0</span>
+
+        <span className="markerDate">Jul</span>
+      </div>
+
+      <div className="marker">
+        <span className="markerValue">3</span>
+        <span className="markerDate">Aug</span>
+      </div>
+
       <button className="currentPeriod">+</button>
     </div>
   </div>
