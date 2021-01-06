@@ -53,6 +53,7 @@
   justify-content: space-between;
   border-radius: 50%;
 }
+
 .challengeWidget .markerValue {
   display: flex;
   height: 3rem;
@@ -67,8 +68,5 @@
   font-size: 1em;
   padding: 12px;
   margin: 12px;
-  margin-left: 0px;
-}
-.challengeWidget .currentPeriod {
-  margin-right: auto;
+  margin-left: 10px;
 }
