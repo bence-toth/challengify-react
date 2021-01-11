@@ -32,26 +32,20 @@
 }
 
 .challengeWidget .markers {
-  padding: 2px;
-  margin: 2px;
-  display: flex;
-}
-
-.challengeWidget .markers .marker {
+  width: 100%;
   display: inline-flex;
   flex-direction: row;
   border-radius: 50%;
 }
 
-.challengeWidget .markers .marker .markerDate {
+.challengeWidget .marker-content {
   display: flex;
-}
-
-.challengeWidget .markers .currentPeriod {
   height: 6rem;
   width: 6rem;
   justify-content: space-between;
   border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
 }
 
 .challengeWidget .markerValue {
@@ -69,4 +63,22 @@
   padding: 12px;
   margin: 12px;
   margin-left: 10px;
+}
+
+.challengeWidget .markerDate {
+  display: flex;
+  padding: 2px;
+  margin: 2px;
+}
+
+.challengeWidget .currentPeriod {
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  border-radius: 60%;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
 }

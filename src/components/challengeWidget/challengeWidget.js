@@ -24,33 +24,32 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
       Read at least two books every month <br></br>
       From 21 January 2021 until 31 December 2021
     </p>
+
     <div className="markers">
-      <div className="marker">
-        <span className="markerValue">3</span>
-        <span className="markerDate">Apr</span>
+      <div className="markers-content">
+        <div className="markerValue">3</div>
+        <p className="markerDate">Apr</p>
       </div>
 
-      <div className="marker">
-        <span className="markerValue">3</span>
-        <span className="markerDate">May</span>
+      <div className="markers-content">
+        <div className="markerValue">3</div>
+        <p className="markerDate">Apr</p>
       </div>
 
-      <div className="marker">
-        <span className="markerValue">2</span>
-        <span className="markerDate">Jun</span>
+      <div className="markers-content">
+        <div className="markerValue">3</div>
+        <p className="markerDate">Apr</p>
       </div>
 
-      <div className="marker">
-        <span className="markerValue">0</span>
-
-        <span className="markerDate">Jul</span>
+      <div className="markers-content">
+        <div className="markerValue">3</div>
+        <p className="markerDate">Apr</p>
       </div>
 
-      <div className="marker">
-        <span className="markerValue">3</span>
-        <span className="markerDate">Aug</span>
+      <div className="markers-content">
+        <div className="markerValue">3</div>
+        <p className="markerDate">Apr</p>
       </div>
-
       <button className="currentPeriod">+</button>
     </div>
   </div>
