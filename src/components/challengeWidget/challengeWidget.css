@@ -1,9 +1,9 @@
 .challengeWidget {
   width: 100%;
   border: 1px solid burlywood;
-  background-color: white;
-  padding: 12px;
-  margin-bottom: 12px;
+  background-color: lightgray;
+  padding: 5px;
+  margin-bottom: 2px;
 }
 
 .challengeWidget header {
@@ -24,7 +24,7 @@
   height: 32px;
   background-color: aquamarine;
   border-radius: 50%;
-  border: 1px solid gray;
+  border: 1px solid black;
   margin-left: 8px;
   display: flex;
   align-items: center;
@@ -33,19 +33,17 @@
 
 .challengeWidget .markers {
   width: 100%;
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-flow: row;
   border-radius: 50%;
+  justify-content: space-between;
 }
 
 .challengeWidget .marker-content {
   display: flex;
   height: 6rem;
   width: 6rem;
-  justify-content: space-between;
   border-radius: 50%;
-  padding: 5px;
-  margin: 5px;
 }
 
 .challengeWidget .markerValue {
@@ -56,19 +54,17 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  background-color: lightgrey;
+  background-color: white;
+  border: 1px solid black;
   color: black;
   text-align: center;
   font-size: 1em;
-  padding: 12px;
-  margin: 12px;
-  margin-left: 10px;
+  padding: 8px;
 }
 
 .challengeWidget .markerDate {
   display: flex;
-  padding: 2px;
-  margin: 2px;
+  font-size: 1rem;
 }
 
 .challengeWidget .currentPeriod {
@@ -79,6 +75,21 @@
   border-radius: 60%;
   text-align: center;
   justify-content: center;
-  padding: 10px;
-  margin: 10px;
+  padding: 8px;
+}
+
+.challengeWidget .checkmark {
+  border-radius: 50%;
+  background-color: limegreen;
+  position: relative;
+  bottom: 30px;
+  float: right;
+}
+
+.challengeWidget .uncheck {
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+  bottom: 30px;
+  float: right;
 }

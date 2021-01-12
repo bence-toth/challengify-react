@@ -28,27 +28,39 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
     <div className="markers">
       <div className="markers-content">
         <div className="markerValue">3</div>
-        <p className="markerDate">Apr</p>
+        <span className="checkmark">✔</span>
+        <span className="markerDate">Mar</span>
+      </div>
+
+      <div className="markers-content">
+        <div className="markerValue">1</div>
+        <span className="uncheck">x</span>
+        <span className="markerDate">Apr</span>
       </div>
 
       <div className="markers-content">
         <div className="markerValue">3</div>
-        <p className="markerDate">Apr</p>
+        <span className="checkmark">✔</span>
+
+        <span className="markerDate">May</span>
+      </div>
+
+      <div className="markers-content">
+        <div className="markerValue">2</div>
+        <span className="uncheck">x</span>
+        <span className="markerDate">Jun</span>
+      </div>
+
+      <div className="markers-content">
+        <div className="markerValue">0</div>
+        <span className="uncheck">x</span>
+        <span className="markerDate">Jul</span>
       </div>
 
       <div className="markers-content">
         <div className="markerValue">3</div>
-        <p className="markerDate">Apr</p>
-      </div>
-
-      <div className="markers-content">
-        <div className="markerValue">3</div>
-        <p className="markerDate">Apr</p>
-      </div>
-
-      <div className="markers-content">
-        <div className="markerValue">3</div>
-        <p className="markerDate">Apr</p>
+        <span className="checkmark">✔</span>
+        <span className="markerDate">Aug</span>
       </div>
       <button className="currentPeriod">+</button>
     </div>
