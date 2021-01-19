@@ -28,7 +28,8 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
     <div className="markers">
       <div className="markerContent">
         <div className="markerValue">
-          3<span className="checkmark">✔</span>
+          <span>3</span>
+          <span className="checkmark">✔</span>
         </div>
         <span className="markerDate">Mar</span>
       </div>
