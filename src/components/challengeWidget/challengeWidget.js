@@ -35,35 +35,40 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
 
       <div className="markerContent">
         <div className="markerValue">
-          1<span className="uncheck">x</span>
+          <span>1</span>
+          <span className="uncheck">✘</span>
         </div>
         <span className="markerDate">Apr</span>
       </div>
 
       <div className="markerContent">
         <div className="markerValue">
-          3<span className="checkmark">✔</span>
+          <span>3</span>
+          <span className="checkmark">✔</span>
         </div>
         <span className="markerDate">May</span>
       </div>
 
       <div className="markerContent">
         <div className="markerValue">
-          2<span className="uncheck">x</span>
+          <span>2</span>
+          <span className="uncheck">✘</span>
         </div>
         <span className="markerDate">Jun</span>
       </div>
 
       <div className="markerContent">
         <div className="markerValue">
-          0<span className="uncheck">x</span>
+          <span>0</span>
+          <span className="uncheck">✘</span>
         </div>
         <span className="markerDate">Jul</span>
       </div>
 
       <div className="markerContent">
         <div className="markerValue">
-          3<span className="checkmark">✔</span>
+          <span>3</span>
+          <span className="checkmark">✔</span>
         </div>
         <span className="markerDate">Aug</span>
       </div>
