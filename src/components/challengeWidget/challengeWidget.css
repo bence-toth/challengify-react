@@ -1,18 +1,22 @@
 .challengeWidget {
   width: 100%;
-  border: 1px solid burlywood;
   background-color: lightgray;
-  padding: 5px;
-  margin-bottom: 2px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 .challengeWidget header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .challengeWidget header .title {
   display: flex;
+}
+
+.challengeWidget header .title a {
+  text-decoration: none;
 }
 
 .challengeWidget header .title h2 {
@@ -31,25 +35,34 @@
   justify-content: center;
 }
 
+.challengeWidget header .label {
+  margin-left: 8px;
+}
+
+.challengeWidget .description {
+  margin-top: 10px;
+}
+
 .challengeWidget .markers {
   width: 100%;
   display: flex;
   flex-flow: row;
   border-radius: 50%;
   justify-content: space-between;
+  align-items: center;
 }
 
-.challengeWidget .marker-content {
+.challengeWidget .markerContent {
   display: flex;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
+  flex-direction: column;
+  position: relative;
 }
 
 .challengeWidget .markerValue {
+  position: relative;
   display: flex;
-  height: 3rem;
-  width: 3rem;
+  height: 3.5rem;
+  width: 3.5rem;
   line-height: 3rem;
   border-radius: 50%;
   justify-content: center;
@@ -64,7 +77,14 @@
 
 .challengeWidget .markerDate {
   display: flex;
-  font-size: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  left: 0;
 }
 
 .challengeWidget .currentPeriod {
@@ -78,18 +98,23 @@
   padding: 8px;
 }
 
-.challengeWidget .checkmark {
+.challengeWidget .checkmark,
+.challengeWidget .uncheck {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+}
+
+.challengeWidget .checkmark {
   background-color: limegreen;
-  position: relative;
-  bottom: 30px;
-  float: right;
 }
 
 .challengeWidget .uncheck {
-  border-radius: 50%;
   background-color: red;
-  position: relative;
-  bottom: 30px;
-  float: right;
 }

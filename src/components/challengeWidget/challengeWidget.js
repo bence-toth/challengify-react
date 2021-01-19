@@ -26,42 +26,48 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
     </p>
 
     <div className="markers">
-      <div className="markers-content">
-        <div className="markerValue">3</div>
-        <span className="checkmark">✔</span>
+      <div className="markerContent">
+        <div className="markerValue">
+          3<span className="checkmark">✔</span>
+        </div>
         <span className="markerDate">Mar</span>
       </div>
 
-      <div className="markers-content">
-        <div className="markerValue">1</div>
-        <span className="uncheck">x</span>
+      <div className="markerContent">
+        <div className="markerValue">
+          1<span className="uncheck">x</span>
+        </div>
         <span className="markerDate">Apr</span>
       </div>
 
-      <div className="markers-content">
-        <div className="markerValue">3</div>
-        <span className="checkmark">✔</span>
-
+      <div className="markerContent">
+        <div className="markerValue">
+          3<span className="checkmark">✔</span>
+        </div>
         <span className="markerDate">May</span>
       </div>
 
-      <div className="markers-content">
-        <div className="markerValue">2</div>
-        <span className="uncheck">x</span>
+      <div className="markerContent">
+        <div className="markerValue">
+          2<span className="uncheck">x</span>
+        </div>
         <span className="markerDate">Jun</span>
       </div>
 
-      <div className="markers-content">
-        <div className="markerValue">0</div>
-        <span className="uncheck">x</span>
+      <div className="markerContent">
+        <div className="markerValue">
+          0<span className="uncheck">x</span>
+        </div>
         <span className="markerDate">Jul</span>
       </div>
 
-      <div className="markers-content">
-        <div className="markerValue">3</div>
-        <span className="checkmark">✔</span>
+      <div className="markerContent">
+        <div className="markerValue">
+          3<span className="checkmark">✔</span>
+        </div>
         <span className="markerDate">Aug</span>
       </div>
+
       <button className="currentPeriod">+</button>
     </div>
   </div>
