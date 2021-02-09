@@ -1,32 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
+import { Chrome, Button } from "components/components";
+import { createRecord } from 'db/records';
 
-import { Chrome } from "components/components";
-
-export const Challenge = ({ challengeId }) => (
-  <Chrome
-    title={`Challenge ${challengeId}`}
-    links={{
-      left: {
-        to: "..",
-        text: "Back",
-      },
-      right: {
-        to: "settings",
-        text: "Edit",
-      },
-    }}
-  >
-    <h3>Record 1</h3>
-    <Link to="records/1/edit">Edit</Link>
-
-    <h3>Record 2</h3>
-    <Link to="records/2/edit">Edit</Link>
-
-    <h3>Record 3</h3>
-    <Link to="records/3/edit">Edit</Link>
-  </Chrome>
-);
+export const Challenge = ({ challengeId, location: {state} }) => {
+  const [records, setRecords] = useState([]);
+  useEffect(() => {
+    const {records} = state;
+    records && setRecords(records);
+  }, [state]);
+  return (
+    <Chrome
+      title={`Challenge ${challengeId}`}
+      links={{
+        left: {
+          to: "..",
+          text: "Back",
+        },
+        right: {
+          to: "settings",
+          text: "Edit",
+        },
+      }}
+    >
+      <Button
+        onClick={async () => {
+          const record = {
+            challengeId,
+            timestamp: new Date().getTime(),
+            value: 1
+          };
+          await createRecord(record)
+            .then(id => {
+              setRecords([
+                ...records,
+                { ...record, id }
+              ]);
+            });
+        }}
+      >
+        Add new record with value 1
+      </Button>
+      {records.map(({id, value}) => (
+        <div key={id}>
+          <h3>Record value: {value}</h3>
+          <Link to={`records/${id}/edit`}>Edit</Link>
+        </div>
+      ))}
+    </Chrome>
+  )
+};
 
 export const DeleteChallenge = ({ challengeId }) => (
   <div>

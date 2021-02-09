@@ -59,19 +59,6 @@ import updateChallenge from "./updateChallenge/updateChallenge";
 //   )
 // }
 
-// createRecord
-// const createRecord = async ({
-//   challengeId,
-//   timestamp,
-//   value
-// }) => await (
-//   db.records.put({
-//     challengeId,
-//     timestamp,
-//     value
-//   })
-// )
-
 // updateRecord
 // const updateRecord = async ({
 //   id,

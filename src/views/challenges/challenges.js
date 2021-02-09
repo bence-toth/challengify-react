@@ -19,11 +19,12 @@ export const Challenges = () => {
         },
       }}
     >
-      {challenges.map((challenge) => (
+      {challenges.map(({id, records, title}) => (
         <ChallengeWidget
-          key={challenge.id}
-          linkTo={`${challenge.id}`}
-          title={challenge.title}
+          key={id}
+          linkTo={`${id}`}
+          records={records}
+          title={title}
           labels={[
             {
               name: "Learning",
