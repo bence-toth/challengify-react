@@ -16,7 +16,7 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
       </div>
       <div className="labels">
         {labels.map(({ name, color }) => (
-          <Label name={name} color={color} />
+          <Label key={name} name={name} color={color} />
         ))}
       </div>
     </header>
