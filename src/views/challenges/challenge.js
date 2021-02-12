@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
 import { Chrome, Button } from "components/components";
-import { createRecord } from 'db/records';
+import { createRecord } from "db/records";
 
-export const Challenge = ({ challengeId, location: {state} }) => {
+export const Challenge = ({ challengeId, location: { state } }) => {
   const [records, setRecords] = useState([]);
   useEffect(() => {
-    const {records} = state;
+    const { records } = state;
     records && setRecords(records);
   }, [state]);
   return (
@@ -28,27 +28,23 @@ export const Challenge = ({ challengeId, location: {state} }) => {
           const record = {
             challengeId,
             timestamp: new Date().getTime(),
-            value: 1
+            value: 1,
           };
-          await createRecord(record)
-            .then(id => {
-              setRecords([
-                ...records,
-                { ...record, id }
-              ]);
-            });
+          await createRecord(record).then((id) => {
+            setRecords([...records, { ...record, id }]);
+          });
         }}
       >
         Add new record with value 1
       </Button>
-      {records.map(({id, value}) => (
+      {records.map(({ id, value }) => (
         <div key={id}>
           <h3>Record value: {value}</h3>
           <Link to={`records/${id}/edit`}>Edit</Link>
         </div>
       ))}
     </Chrome>
-  )
+  );
 };
 
 export const DeleteChallenge = ({ challengeId }) => (

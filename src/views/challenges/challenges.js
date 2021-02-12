@@ -19,7 +19,7 @@ export const Challenges = () => {
         },
       }}
     >
-      {challenges.map(({id, records, title}) => (
+      {challenges.map(({ id, records, title }) => (
         <ChallengeWidget
           key={id}
           linkTo={`${id}`}

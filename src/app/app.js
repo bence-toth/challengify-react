@@ -1,6 +1,6 @@
 import React from "react";
 import { Router, Link } from "@reach/router";
-import { ChallengesRouter } from './routes';
+import { ChallengesRouter } from "./routes";
 
 const Splash = () => (
   <p path="/">

@@ -1,9 +1,9 @@
 import React from "react";
 import { Router } from "@reach/router";
 import { CreateChallenge, EditChallenge } from "views/views";
-import { Challenges } from 'views/challenges/challenges';
-import { Challenge, DeleteChallenge } from 'views/challenges/challenge';
-import { EditRecord, DeleteRecord } from 'views/records/record';
+import { Challenges } from "views/challenges/challenges";
+import { Challenge, DeleteChallenge } from "views/challenges/challenge";
+import { EditRecord, DeleteRecord } from "views/records/record";
 
 export const ChallengeRouter = ({ challengeId }) => (
   <Router className="fullSize">

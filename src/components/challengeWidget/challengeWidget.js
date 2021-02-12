@@ -9,7 +9,7 @@ const ChallengeWidget = ({ title, records, labels, linkTo = "#" }) => (
   <div className="challengeWidget">
     <header>
       <div className="title">
-        <Link to={linkTo} state={{records}}>
+        <Link to={linkTo} state={{ records }}>
           <h2>{title}</h2>
         </Link>
         <span className="statusIcon">✔</span>
