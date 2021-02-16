@@ -100,6 +100,39 @@ const Challenges = () => {
               color: "#feffcb",
             },
           ]}
+          description="Read at least two books every month from 21 January 2021 until 31 December 2021"
+          markers={[
+            {
+              value: 3,
+              date: "Mar",
+              succeeded: true,
+            },
+            {
+              value: 0,
+              date: "Apr",
+              succeeded: true,
+            },
+            {
+              value: 6,
+              date: "May",
+              succeeded: true,
+            },
+            {
+              value: 5,
+              date: "Jun",
+              succeeded: false,
+            },
+            {
+              value: 2,
+              date: "Jul",
+              succeeded: false,
+            },
+            {
+              value: 11,
+              date: "Aug",
+              succeeded: false,
+            },
+          ]}
         />
       ))}
     </Chrome>

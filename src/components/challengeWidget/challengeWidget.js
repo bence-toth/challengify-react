@@ -5,7 +5,13 @@ import { Label } from "../components";
 
 import "./challengeWidget.css";
 
-const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
+const ChallengeWidget = ({
+  title,
+  labels,
+  linkTo = "#",
+  description,
+  markers,
+}) => (
   <div className="challengeWidget">
     <header>
       <div className="title">
@@ -20,21 +26,21 @@ const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
         ))}
       </div>
     </header>
-    <p className="description">
-      Read at least two books every month <br></br>
-      From 21 January 2021 until 31 December 2021
-    </p>
+
+    <p className="description">{description}</p>
+
     <div className="markers">
-      <span className="marker">3</span>
-      <p>Apr</p>
-      <span className="marker">3</span>
-      <p>May</p>
-      <span className="marker">2</span>
-      <p>jun</p>
-      <span className="marker">0</span>
-      <p>Jul</p>
-      <span className="marker">3</span>
-      <p>Aug</p>
+      {markers.map(({ date, value, succeeded }) => (
+        <div className="markerContent">
+          <div className="markerValue">
+            <span>{value}</span>
+            <span className={succeeded ? "checkmark" : "uncheck"}>
+              {succeeded ? "✔" : "✗"}
+            </span>
+          </div>
+          <span className="markerDate">{date}</span>
+        </div>
+      ))}
       <button className="currentPeriod">+</button>
     </div>
   </div>
