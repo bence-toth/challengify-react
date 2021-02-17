@@ -7,7 +7,9 @@ export const Challenge = ({ challengeId, location: { state } }) => {
   const [records, setRecords] = useState([]);
   useEffect(() => {
     const { records } = state;
-    records && setRecords(records);
+    if (records) {
+      setRecords(records);
+    }
   }, [state]);
   return (
     <Chrome
