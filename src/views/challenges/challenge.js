@@ -15,7 +15,7 @@ export const Challenge = ({ challengeId, location: { state } }) => {
         setRecords(await getRecords(challengeId));
       })();
     }
-  }, [state]);
+  }, [state, challengeId]);
   return (
     <Chrome
       title={`Challenge ${challengeId}`}
