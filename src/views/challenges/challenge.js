@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
 import { Chrome, Button } from "components/components";
-import { createRecord } from "db/records";
+import { createRecord, getRecords } from "db/records";
 
 export const Challenge = ({ challengeId, location: { state } }) => {
   const [records, setRecords] = useState([]);
@@ -9,6 +9,11 @@ export const Challenge = ({ challengeId, location: { state } }) => {
     const { records } = state;
     if (records) {
       setRecords(records);
+    }
+    else {
+      (async () => {
+        setRecords(await getRecords(challengeId));
+      })();
     }
   }, [state]);
   return (
