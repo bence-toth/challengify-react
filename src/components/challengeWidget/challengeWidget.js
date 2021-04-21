@@ -5,18 +5,18 @@ import { Label } from "../components";
 
 import "./challengeWidget.css";
 
-const ChallengeWidget = ({ title, labels, linkTo = "#" }) => (
+const ChallengeWidget = ({ title, records, labels, linkTo = "#" }) => (
   <div className="challengeWidget">
     <header>
       <div className="title">
-        <Link to={linkTo}>
+        <Link to={linkTo} state={{ records }}>
           <h2>{title}</h2>
         </Link>
         <span className="statusIcon">✔</span>
       </div>
       <div className="labels">
         {labels.map(({ name, color }) => (
-          <Label name={name} color={color} />
+          <Label key={name} name={name} color={color} />
         ))}
       </div>
     </header>
