@@ -7,7 +7,7 @@ import {
   Challenge,
   DeleteChallenge,
   EditRecord,
-  DeleteRecord
+  DeleteRecord,
 } from "views";
 
 export const ChallengeRouter = ({ challengeId }) => (

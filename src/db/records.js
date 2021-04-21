@@ -7,8 +7,5 @@ export const createRecord = async ({ challengeId, timestamp, value }) =>
     value,
   });
 
-export const getRecords = async challengeId =>
-  await db.records
-  .where("challengeId")
-  .equals(`${challengeId}`)
-  .toArray();
+export const getRecords = async (challengeId) =>
+  await db.records.where("challengeId").equals(`${challengeId}`).toArray();

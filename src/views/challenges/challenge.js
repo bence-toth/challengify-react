@@ -9,8 +9,7 @@ export const Challenge = ({ challengeId, location: { state } }) => {
     const { records } = state;
     if (records) {
       setRecords(records);
-    }
-    else {
+    } else {
       (async () => {
         setRecords(await getRecords(challengeId));
       })();
